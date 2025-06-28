@@ -1,1 +1,270 @@
-Website coming soon..
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mamma Mia Restaurant Estd. 1972 – Mission Bay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      display: block;
+      max-height: 100vh;
+      object-fit: cover;
+    }
+
+    .hero h1 {
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 3rem;
+      padding: 6px 8px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      color: #fff;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+      z-index: 10;
+    }
+
+    .hero h1 span.green { color: #27ae60; }
+    .hero h1 span.white { color: #fff; }
+    .hero h1 span.red   { color: #e74c3c; }
+
+    .call-button-hero {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #c0392b;
+      color: #ffffff;
+      border: 2px solid #c0392b;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 11;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .call-button-hero:hover {
+      background: #c0392b;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .three-column-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+
+    .info-box {
+      flex: 0 0 28%;
+      text-align: center;
+      align-items: center;
+    }
+
+    .menu-box {
+      flex: 0 0 40%;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hours-box {
+      flex: 0 0 26%;
+      align-items: center;
+      text-align: center;
+    }
+
+    .info-section {
+      margin-bottom: 18px;
+    }
+
+    .info-section h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.25rem;
+      color: #c0392b;
+      margin-bottom: 6px;
+    }
+
+    .info-section p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.5;
+      color: #000;
+    }
+
+    .icon {
+      width: 18px !important;
+      height: 18px !important;
+      display: inline-block;
+      object-fit: contain;
+      vertical-align: middle;
+      box-sizing: content-box;
+    }
+
+    .box img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: contain;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .menu-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #c0392b;
+      margin-bottom: 12px;
+    }
+
+    .map-container {
+      background: #fff;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-container h2 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #c0392b;
+    }
+
+    iframe.map {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 1024px) {
+      .three-column-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .info-box, .menu-box, .hours-box {
+        flex: 1 0 100%;
+        text-align: center;
+        align-items: center;
+      }
+
+      .info-box {
+        text-align: center;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="https://i.ibb.co/MDFm6BMN/mammamia.jpg" alt="Mamma Mia Restaurant">
+    <h1>
+      <span class="green">Mamma</span> 
+      <span class="white">Mia</span> 
+      <span class="red">Restaurant</span><br> 
+      <span class="white">Estd. 1972</span>
+    </h1>
+    <a href="tel:+6495283797" class="call-button-hero">
+      <span style="color: #ffffff;">&#9742;</span> Call for Reservation/Order
+    </a>
+  </div>
+
+  <!-- Info + Menu + Hours -->
+  <div class="three-column-row">
+    <!-- Info -->
+    <div class="box info-box">
+      <div class="info-section">
+        <h2><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="icon"> Location</h2>
+        <p>51 Tamaki Drive, Mission Bay,<br>Auckland 1071, New Zealand</p>
+      </div>
+      <div class="info-section">
+        <h2><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="icon"> Contact</h2>
+        <p><a href="tel:+6495283797" style="color: #000;">+64 9 528 3797</a></p>
+      </div>
+      <div class="info-section">
+        <h2><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="icon"> Instagram</h2>
+        <p><a href="https://www.instagram.com/mammamia.1972/" target="_blank" style="color: #000;">@mammamia.1972</a></p>
+      </div>
+      <div class="info-section">
+        <h2><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" class="icon"> Facebook</h2>
+        <p><a href="https://www.facebook.com/profile.php?id=61577123166746" target="_blank" style="color: #000;">Mamma Mia Facebook Page</a></p>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="box menu-box">
+      <div class="menu-title">Dine-In Menu</div>
+      <img src="https://i.ibb.co/1tGkVXsj/menu.jpg" alt="Dine-In Menu">
+    </div>
+
+    <!-- Hours -->
+    <div class="box hours-box">
+      <div class="menu-title">Opening Hours</div>
+      <img src="https://i.ibb.co/LDydVG0X/timings.jpg" alt="Opening Hours">
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div class="map-container">
+    <h2><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="icon"> Find Us on Google Maps</h2>
+    <iframe class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31807.019831472448!2d174.81601659999998!3d-36.851906699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d49ba5bb4b233%3A0x3a88f9e8bc4ffae3!2s51%20Tamaki%20Drive%2C%20Mission%20Bay%2C%20Auckland%201071%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1719573500000!5m2!1sen!2snz"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+</body>
+</html>
