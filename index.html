@@ -17,17 +17,20 @@
     a:hover {
       text-decoration: none;
     }
+
     .hero {
       position: relative;
       width: 100%;
       overflow: hidden;
     }
+
     .hero img {
       width: 100%;
       display: block;
       max-height: 100vh;
       object-fit: cover;
     }
+
     .hero h1 {
       position: absolute;
       bottom: 70px;
@@ -43,6 +46,7 @@
       z-index: 10;
       white-space: nowrap;
     }
+
     .hero h1 span.green { color: #27ae60; }
     .hero h1 span.white { color: #fff; }
     .hero h1 span.red   { color: #e74c3c; }
@@ -66,7 +70,9 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      white-space: nowrap;
     }
+
     .call-button-hero:hover {
       background: #c0392b;
       color: #ffffff;
@@ -157,33 +163,33 @@
       border-radius: 8px;
     }
 
-    @media (max-width: 1024px) {
+    /* Mobile-specific styling */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.4rem;
+        padding: 6px 10px;
+        white-space: nowrap;
+        bottom: 80px;
+      }
+
+      .call-button-hero {
+        font-size: 0.95rem;
+        padding: 10px 16px;
+        bottom: 30px;
+        white-space: nowrap;
+      }
+
+      .box {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+
       .three-column-row,
       .info-map-row {
         flex-direction: column;
         align-items: center;
-        padding: 20px 10px;
-      }
-
-      .hero h1 {
-        font-size: 1.8rem;
-        bottom: 50px;
-        white-space: normal;
-        padding: 8px;
-      }
-
-      .call-button-hero {
-        font-size: 1rem;
-        padding: 10px 20px;
-        bottom: 15px;
-        flex-wrap: wrap;
-        text-align: center;
-      }
-
-      .box img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+        padding: 10px 0;
+        gap: 24px;
       }
 
       .info-section h2 {
@@ -215,11 +221,11 @@
   <!-- Menus Row -->
   <div class="three-column-row">
     <div class="box menu-box">
-      <div class="menu-title">Dine-In Menu</div>
+      <div class="menu-title">Dine In Menu</div>
       <img src="https://i.ibb.co/1tGkVXsj/menu.jpg" alt="Dine-In Menu">
     </div>
     <div class="box takeaway-box">
-      <div class="menu-title">TakeAway Menu</div>
+      <div class="menu-title">Take Away Menu</div>
       <img src="https://i.ibb.co/FqCn5rr4/takeaway-menu.jpg" alt="TakeAway Menu">
     </div>
   </div>
@@ -240,7 +246,7 @@
       </div>
       <div class="info-section">
         <h2><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" class="icon"> Contact</h2>
-        <p><a href="tel:+6495283797" style="color: #000;">+64 9 528 3797</a></p>
+        <p><a href="tel:+64-95283797" style="color: #000;">+64-95283797</a></p>
       </div>
       <div class="info-section">
         <h2><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="icon"> Instagram</h2>
