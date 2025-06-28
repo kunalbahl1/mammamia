@@ -66,10 +66,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-    }
-    .call-button-hero:hover {
-      background: #c0392b;
-      color: #ffffff;
+      white-space: nowrap;
     }
 
     .three-column-row {
@@ -165,6 +162,10 @@
         padding: 20px 10px;
       }
 
+      .info-box {
+        width: 90%;
+      }
+
       .hero h1 {
         font-size: 1.8rem;
         bottom: 50px;
@@ -176,8 +177,8 @@
         font-size: 1rem;
         padding: 10px 20px;
         bottom: 15px;
-        flex-wrap: wrap;
         text-align: center;
+        flex-wrap: nowrap;
       }
     }
 
@@ -193,6 +194,7 @@
         padding: 6px 12px;
         bottom: 10px;
         border-radius: 6px;
+        flex-wrap: nowrap;
       }
 
       .menu-title {
@@ -210,6 +212,10 @@
       .icon {
         width: 14px !important;
         height: 14px !important;
+      }
+
+      .info-box {
+        width: 95%;
       }
     }
   </style>
