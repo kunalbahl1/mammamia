@@ -93,10 +93,11 @@
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
+      width: auto;
+      flex: 1 1 30%;
     }
 
     .info-box, .menu-box, .takeaway-box, .hours-box, .map-box {
-      flex: 1 1 30%;
       text-align: center;
       align-items: center;
     }
@@ -162,31 +163,33 @@
         padding: 20px 10px;
       }
 
-      .info-box {
-        width: 90%;
-      }
-
       .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         bottom: 50px;
         white-space: normal;
-        padding: 8px;
+        padding: 6px 10px;
       }
 
       .call-button-hero {
         font-size: 1rem;
         padding: 10px 20px;
         bottom: 15px;
-        text-align: center;
         flex-wrap: nowrap;
+      }
+
+      .box {
+        width: 90%;
+        max-width: 90%;
+        margin-bottom: 20px;
       }
     }
 
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 1.2rem;
-        padding: 4px 8px;
-        bottom: 50px;
+        padding: 6px 8px;
+        bottom: 45px;
+        white-space: normal;
       }
 
       .call-button-hero {
@@ -194,7 +197,6 @@
         padding: 6px 12px;
         bottom: 10px;
         border-radius: 6px;
-        flex-wrap: nowrap;
       }
 
       .menu-title {
@@ -213,10 +215,6 @@
         width: 14px !important;
         height: 14px !important;
       }
-
-      .info-box {
-        width: 95%;
-      }
     }
   </style>
 </head>
@@ -228,8 +226,7 @@
     <h1>
       <span class="green">Mamma</span> 
       <span class="white">Mia</span> 
-      <span class="red">Restaurant</span> 
-      <span class="white" style="margin-left: 8px;">Estd. 1972</span>
+      <span class="red">Restaurant Estd. 1972</span>
     </h1>
     <a href="tel:+6495283797" class="call-button-hero">
       <span style="color: #ffffff;">&#9742;</span> Call for Reservation/Order
