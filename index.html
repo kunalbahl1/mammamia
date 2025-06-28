@@ -157,6 +157,7 @@
       border-radius: 8px;
     }
 
+    /* Responsive tweaks for tablets */
     @media (max-width: 1024px) {
       .three-column-row,
       .info-map-row {
@@ -179,19 +180,37 @@
         flex-wrap: wrap;
         text-align: center;
       }
+    }
 
-      .box img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+    /* Responsive tweaks for phones */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.2rem;
+        padding: 4px 8px;
+        bottom: 50px;
       }
 
-      .info-section h2 {
+      .call-button-hero {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        bottom: 10px;
+      }
+
+      .menu-title {
         font-size: 1.1rem;
       }
 
-      .info-section p {
+      .info-section h2 {
         font-size: 1rem;
+      }
+
+      .info-section p {
+        font-size: 0.95rem;
+      }
+
+      .icon {
+        width: 14px !important;
+        height: 14px !important;
       }
     }
   </style>
