@@ -11,23 +11,28 @@
       background-color: #f4f4f4;
       color: #333;
     }
+
     a {
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: none;
     }
+
     .hero {
       position: relative;
       width: 100%;
       overflow: hidden;
     }
+
     .hero img {
       width: 100%;
       display: block;
       max-height: 100vh;
       object-fit: cover;
     }
+
     .hero h1 {
       position: absolute;
       bottom: 70px;
@@ -43,6 +48,7 @@
       z-index: 10;
       white-space: nowrap;
     }
+
     .hero h1 span.green { color: #27ae60; }
     .hero h1 span.white { color: #fff; }
     .hero h1 span.red   { color: #e74c3c; }
@@ -66,7 +72,9 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      white-space: nowrap;
     }
+
     .call-button-hero:hover {
       background: #c0392b;
       color: #ffffff;
@@ -157,33 +165,35 @@
       border-radius: 8px;
     }
 
-    @media (max-width: 1024px) {
+    /* Mobile-specific styling */
+    @media (max-width: 768px) {
+      .hero h1 {
+        bottom: 80px; /* just above button */
+        font-size: 1rem;
+        padding: 4px 8px;
+        white-space: nowrap;
+        line-height: 1.4;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .call-button-hero {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+        bottom: 20px;
+        gap: 6px;
+      }
+
+      .box {
+        width: 90%;
+        margin-bottom: 12px;
+      }
+
       .three-column-row,
       .info-map-row {
         flex-direction: column;
         align-items: center;
-        padding: 20px 10px;
-      }
-
-      .hero h1 {
-        font-size: 1.8rem;
-        bottom: 50px;
-        white-space: normal;
-        padding: 8px;
-      }
-
-      .call-button-hero {
-        font-size: 1rem;
-        padding: 10px 20px;
-        bottom: 15px;
-        flex-wrap: wrap;
-        text-align: center;
-      }
-
-      .box img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+        padding: 6px 0;
+        gap: 16px;
       }
 
       .info-section h2 {
@@ -200,39 +210,37 @@
 
   <!-- Hero Section -->
   <div class="hero">
-    <img src="https://i.ibb.co/MDFm6BMN/mammamia.jpg" alt="Mamma Mia Restaurant">
+    <img src="https://i.ibb.co/JFWzGftC/mammamia.jpg" alt="Mamma Mia Restaurant">
     <h1>
       <span class="green">Mamma</span> 
       <span class="white">Mia</span> 
       <span class="red">Restaurant</span> 
       <span class="white" style="margin-left: 8px;">Estd. 1972</span>
     </h1>
-    <a href="tel:+6495283797" class="call-button-hero">
+    <a href="tel:+64-95283797" class="call-button-hero">
       <span style="color: #ffffff;">&#9742;</span> Call for Reservation/Order
     </a>
   </div>
 
   <!-- Menus Row -->
   <div class="three-column-row">
+    <div class="box takeaway-box">
+      <div class="menu-title">Take Away Menu</div>
+      <img src="https://i.ibb.co/RGRyvFqf/Takeaway-menu-1-1.png" alt="TakeAway Menu">
+    </div>
     <div class="box menu-box">
       <div class="menu-title">Dine In Menu</div>
       <img src="https://i.ibb.co/1tGkVXsj/menu.jpg" alt="Dine-In Menu">
-    </div>
-    <div class="box takeaway-box">
-      <div class="menu-title">Take Away Menu</div>
-      <img src="https://i.ibb.co/FqCn5rr4/takeaway-menu.jpg" alt="TakeAway Menu">
     </div>
   </div>
 
   <!-- Info + Hours + Map Row -->
   <div class="info-map-row">
-    <!-- Opening Hours -->
     <div class="box hours-box">
       <div class="menu-title">Opening Hours</div>
       <img src="https://i.ibb.co/LDydVG0X/timings.jpg" alt="Opening Hours">
     </div>
 
-    <!-- Info -->
     <div class="box info-box">
       <div class="info-section">
         <h2><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="icon"> Location</h2>
@@ -252,7 +260,6 @@
       </div>
     </div>
 
-    <!-- Map -->
     <div class="box map-box">
       <h2><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="icon"> Find Us on Google Maps</h2>
       <iframe
